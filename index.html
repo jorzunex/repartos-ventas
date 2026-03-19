@@ -894,6 +894,126 @@
     a.cta-contact { text-decoration: none; transition: all 0.2s ease; }
     a.cta-contact:hover { background: rgba(255,255,255,0.1); border-color: rgba(249,115,22,0.5); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
 
+    /* ─── RESPONSIVE ─── */
+
+    /* Evitar scroll horizontal global */
+    html, body { overflow-x: hidden; }
+
+    /* Wrapper scroll horizontal para tablas */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 20px;
+      margin-bottom: 48px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .table-scroll > table {
+      margin-bottom: 0;
+      box-shadow: none;
+      min-width: 560px;
+    }
+    .income-table { min-width: 460px; }
+
+    /* ── Tablet ≤ 768px ── */
+    @media (max-width: 768px) {
+      .cover { padding: 48px 24px; min-height: auto; }
+      .cover h1 { font-size: 44px; letter-spacing: -1px; }
+      .cover-tagline { font-size: 22px; }
+      .cover-stats { gap: 24px; }
+      .stat-num { font-size: 28px; }
+      .page { padding: 48px 28px; }
+      h2.section-title { font-size: 30px; }
+
+      .plans-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .commission-grid {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .commission-hero { padding: 36px 28px; }
+      .commission-40 { font-size: 56px; }
+      .rules-grid { grid-template-columns: 1fr; }
+      .materials-list { grid-template-columns: 1fr; }
+      .cta-box { padding: 40px 28px; }
+      .cta-box h3 { font-size: 26px; }
+      .cta-contacts { gap: 16px; }
+
+      /* Aurora más pequeña en tablet */
+      #cover-aurora .aurora-blob:nth-child(1) { width: 400px; height: 400px; }
+      #cover-aurora .aurora-blob:nth-child(2) { width: 350px; height: 350px; }
+      #cover-aurora .aurora-blob:nth-child(3) { width: 260px; height: 260px; }
+      #cover-aurora .aurora-blob:nth-child(4) { width: 200px; height: 200px; }
+    }
+
+    /* ── Móvil pequeño ≤ 480px ── */
+    @media (max-width: 480px) {
+      .cover { padding: 40px 16px; }
+      .cover h1 { font-size: 30px; letter-spacing: -0.5px; }
+      .cover-sub { font-size: 14px; margin-bottom: 32px; }
+      .cover-tagline { font-size: 17px; }
+      .cover-desc { font-size: 13px; max-width: 100%; }
+      .cover-stats { gap: 16px; flex-wrap: wrap; justify-content: center; }
+      .stat-num { font-size: 22px; }
+      .stat-label { font-size: 10px; }
+      .stat { min-width: 72px; }
+      .logo-box { width: 64px; height: 64px; font-size: 28px; border-radius: 18px; }
+
+      .page { padding: 32px 16px; }
+      h2.section-title { font-size: 22px; letter-spacing: -0.3px; }
+      .section-desc { font-size: 13px; }
+      .section-tag { font-size: 10px; padding: 5px 12px; }
+
+      .plans-grid { max-width: 100%; }
+      .plan-card { padding: 22px 16px; border-radius: 18px; }
+      .plan-price { font-size: 30px; }
+      .plan-feature { font-size: 12px; }
+
+      .commission-hero { padding: 28px 16px; border-radius: 20px; }
+      .commission-hero h3 { font-size: 20px; }
+      .commission-40 { font-size: 44px; }
+      .commission-hero p { font-size: 13px; }
+      .commission-grid { max-width: 100%; }
+      .comm-card { padding: 18px 14px; }
+      .comm-card-price { font-size: 18px; }
+      .comm-card-earn { font-size: 22px; }
+
+      .rules-grid { gap: 12px; }
+      .rule-card { padding: 18px 16px; border-radius: 16px; }
+
+      .step-num { width: 34px; height: 34px; font-size: 14px; border-radius: 10px; flex-shrink: 0; }
+      .step-item { gap: 12px; }
+      .step-title { font-size: 14px; }
+      .step-desc { font-size: 12px; }
+
+      .materials-list { gap: 10px; }
+      .material-item { gap: 10px; padding: 14px 14px; border-radius: 14px; }
+      .material-text { font-size: 12px; }
+
+      .info-box { flex-direction: column; gap: 10px; padding: 18px 16px; border-radius: 16px; }
+
+      .cta-box { padding: 28px 16px; border-radius: 20px; }
+      .cta-box h3 { font-size: 20px; }
+      .cta-box p { font-size: 13px; margin-bottom: 24px; }
+      .cta-contacts { flex-direction: column; align-items: stretch; gap: 12px; }
+      a.cta-contact { min-width: unset; width: 100%; }
+      .cta-contact-val { font-size: 13px; }
+
+      .table-scroll { border-radius: 14px; }
+      .doc-footer { font-size: 11px; padding: 24px 0; }
+
+      /* Aurora mínima en móvil */
+      #cover-aurora .aurora-blob:nth-child(1) { width: 300px; height: 300px; }
+      #cover-aurora .aurora-blob:nth-child(2) { width: 250px; height: 250px; }
+      #cover-aurora .aurora-blob:nth-child(3) { width: 180px; height: 180px; }
+      #cover-aurora .aurora-blob:nth-child(4) { display: none; }
+    }
+
     /* ─── PRINT ─── */
     @media print {
       body {
@@ -1089,6 +1209,7 @@
     </div>
 
     <!-- TABLA COMPARATIVA -->
+    <div class="table-scroll">
     <table class="feature-table">
       <thead>
         <tr>
@@ -1186,6 +1307,7 @@
         </tr>
       </tbody>
     </table>
+    </div><!-- /table-scroll feature-table -->
 
     <div class="info-box">
       <div class="info-box-icon" style="color:#ea580c"><i data-lucide="lightbulb"></i></div>
@@ -1239,6 +1361,7 @@
 
     <h3 style="font-size:20px;font-weight:800;color:#1c1917;margin-bottom:20px">Proyección de ingresos mensuales</h3>
 
+    <div class="table-scroll">
     <table class="income-table">
       <thead>
         <tr>
@@ -1287,6 +1410,7 @@
         </tr>
       </tbody>
     </table>
+    </div><!-- /table-scroll income-table -->
 
     <p style="font-size:12px;color:#a8a29e;margin-bottom:40px">
       * Mix realista = 30% Básico + 50% Pro + 20% Enterprise. Cifras en COP antes de impuestos.
